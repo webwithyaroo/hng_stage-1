@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tech Goals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bannerSection">
+        <header>
+          <p>yaroo</p>
+          <h1>frontEnd</h1>
+          <p>-developer-</p>
+        </header>
+        <a href="#goalsStab">
+          <ul class="animatedBtn">
+            <li>>></li>
+          </ul>
+        </a>
+      </div>
+
+      <section  id="goalsStab" class="goalStab">
+        <h1>My Tech Goals for the Next 2 Years</h1>
+
+        <section>
+          <h2>Goal 1: Mastering JavaScript Frameworks</h2>
+          <p>
+            In the next two years, I aim to master popular JavaScript frameworks
+            such as React and Vue.js. These frameworks are pivotal in modern web
+            development, enabling the creation of dynamic and responsive user
+            interfaces. I plan to dive deep into advanced concepts, contribute
+            to open-source projects, and build several complex applications to
+            solidify my understanding and proficiency.
+          </p>
+        </section>
+
+        <section>
+          <h2>Goal 2: Building a Strong Portfolio</h2>
+          <p>
+            I intend to create a robust portfolio showcasing a variety of
+            projects that demonstrate my skills and versatility in frontend
+            development. This will include personal projects, freelance work,
+            and contributions to community initiatives. A well-rounded portfolio
+            will not only highlight my technical abilities but also my
+            problem-solving skills and creativity.
+          </p>
+        </section>
+
+        <section>
+          <h2>Goal 3: Enhancing Design Skills</h2>
+          <p>
+            While my primary focus is on development, I recognize the importance
+            of design in creating appealing and user-friendly interfaces. Over
+            the next two years, I plan to improve my design skills by studying
+            UI/UX principles, experimenting with different design tools, and
+            following the latest design trends. This will help me create more
+            visually appealing and intuitive websites.
+          </p>
+        </section>
+
+        <section>
+          <h2>Goal 4: Learning Backend Development</h2>
+          <p>
+            To become a full-stack developer, I will dedicate time to learning
+            backend technologies. Understanding how the server-side of web
+            applications works will allow me to create more comprehensive and
+            integrated solutions. I will start with Node.js and Express, and
+            gradually explore other backend frameworks and databases.
+          </p>
+        </section>
+
+        <section>
+          <h2>Goal 5: Contributing to the Community</h2>
+          <p>
+            I believe in the power of community and the importance of giving
+            back. In the next two years, I plan to contribute to open-source
+            projects, write technical articles, and participate in coding
+            forums. Sharing knowledge and helping others will not only improve
+            my skills but also build a network of like-minded professionals.
+          </p>
+        </section>
+      </section>
+      <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p data-testid="slackDisplayName">
+          Slack Display Name: Issa-soliu Ridollahi (yaroo)
+        </p>
+        <p data-testid="slackEmail">Slack Email: olawaleridollahi@gmail.com</p>
+      </section>
+
+      <section class="current-info">
+        <h2>Current Information</h2>
+        <p data-testid="currentTimeUTC">
+          Current Time in UTC:
+          <!-- JavaScript will populate this -->
+        </p>
+        <p data-testid="currentDay">
+          Current Day of the Week: 
+        </p>
+        
+      </section>
+
+      <section class="profile-picture">
+        <h2>Slack Profile Picture</h2>
+        <img
+          src="/img/slack.png"
+          alt="Slack Profile Picture"
+          data-testid="slackProfilePicture"
+        />
+      </section>
+
+      <section class="links">
+        <h2>Important Links</h2>
+        <ul>
+          <li>
+            <a href="https://hng.tech/learn" data-testid="hngLink"
+              >HNG Tech Learning Platform</a
+            >
+          </li>
+          <li>
+            <a href="https://keyword.dog" data-testid="keywordLink"
+              >Keyword Dog</a
+            >
+          </li>
+          <li>
+            <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink"
+              >Scrape Any Web</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      function updateCurrentTimeAndDay() {
+        const currentTimeElement = document.querySelector(
+          '[data-testid="currentTimeUTC"]'
+        );
+        const currentDayElement = document.querySelector(
+          '[data-testid="currentDay"]'
+        );
+        const now = new Date();
+        const dayNames = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        currentTimeElement.textContent = `Current Time in UTC: ${now.toUTCString()}`;
+        currentDayElement.textContent = `Current Day of the Week: ${
+          dayNames[now.getUTCDay()]
+        }`;
+      }
+
+      updateCurrentTimeAndDay();
+      setInterval(updateCurrentTimeAndDay, 60000); // Update every minute
+    </script>
+  </body>
+</html>
